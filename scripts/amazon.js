@@ -1,3 +1,5 @@
+import{cart} from '../data/cart.js'
+
 // this is html for all containers 
 
 let productsHTML = '';
@@ -61,8 +63,7 @@ document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
 // for add to cart button
 
-
-
+// push product in cart by use of DOM
 
 document.querySelectorAll('.js-add-to-cart').forEach((button) => {
   button.addEventListener('click',() => {
@@ -77,20 +78,22 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
 
         if(matchingItem){
           matchingItem.quantity += 1;
-        } 
+        }
         else{
           cart.push({
             productId : productId,
             quantity : 1
-          });
+            });
         }
 
+        // for count quantity in cart
         let cartQuantity = 0;
 
         cart.forEach((item)=> {
           cartQuantity += item.quantity;
         });
 
+        // DOM to intract with cart quantity in header line
         document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 
   });
