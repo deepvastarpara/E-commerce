@@ -1,7 +1,7 @@
 // use to forment currency
 
 export function formentCurrency(pricrCents){
-    return (pricrCents / 100).toFixed(2);
+    return (Math.round(pricrCents) / 100).toFixed(2);
 }
 
 // this s use for default export
