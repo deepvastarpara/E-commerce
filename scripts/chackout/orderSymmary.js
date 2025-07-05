@@ -4,6 +4,7 @@ import { formentCurrency } from '../utils/money.js';
 // dayjs library by default export
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
 import{deliveryOptions , getDeliveryOption} from '../../data/deliveryOptions.js'
+import { renderPaymentSummary } from './paymentSummary.js';
 
 const today = dayjs();
 const deliveryDate = today.add(7,'days');
@@ -130,6 +131,8 @@ export function renderOrederSummary(){
                 .js-cart-item-container-${productId}`
             );
             container.remove();
+
+            renderPaymentSummary();
         });
     });
 
@@ -137,7 +140,10 @@ export function renderOrederSummary(){
         element.addEventListener('click' , () => {
             const {productId,deliveryOptionId} = element.dataset;
             updateDeliveryOption(productId,deliveryOptionId);
+
             renderOrederSummary();
+
+            renderPaymentSummary();
         });
     });
 
