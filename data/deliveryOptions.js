@@ -20,7 +20,6 @@ export function getDeliveryOption(deliveryOptionId){
             deliveryOption = option;      
         }
     });
-    console.log(deliveryOption);
     
 
     return deliveryOption ;//|| deliveryOptions[0];
