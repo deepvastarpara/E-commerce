@@ -1,4 +1,4 @@
-import {formentCurrency} from '../scripts/utils/money.js';
+import {formentCurrency} from '../../scripts/utils/money.js';
 
 describe('test suite : formentCurrency' , () => {
     it('converts cents into dollars',() => {
