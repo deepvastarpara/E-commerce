@@ -50,7 +50,7 @@ export function renderOrederSummary(){
                     ${matchingProduct.name}
                 </div>
                 <div class="product-price">
-                    $${(formentCurrency(matchingProduct.priceCents))}
+                    ${matchingProduct.getPrice()}
                 </div>
                 <div class="product-quantity">
                     <span>
