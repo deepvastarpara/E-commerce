@@ -48,6 +48,7 @@ class Clothing extends Product{
     this.sizeChartLink = productDetails.sizeChartLink;
   }
 // this is not run in my code
+
   extraInfoHTML(){
     return `
       <a href = "${this.sizeChartLink}" taget = "_blank">
@@ -56,6 +57,39 @@ class Clothing extends Product{
     `;
   }
 }
+
+// extra 
+
+/*
+const date = new Date();
+
+console.log(date);
+console.log(date.toLocaleTimeString());
+*/
+
+/*
+console.log(this);
+
+const obj2 = {
+  a: 2,
+  b: this.a
+}
+*/
+
+/*
+function fun1(){
+  console.log(this);
+}
+fun1();
+fun1.call('deep');
+
+const obj3 = {
+  method : () => {
+    console.log(this); 
+  }
+}
+obj3.method();
+*/
 
 // this is array in which all data are store
 
