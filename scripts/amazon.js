@@ -79,7 +79,7 @@ function updateCartQuantity(){
          // DOM to intract with cart quantity in header line
         document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 
-}
+} 
 
 // push product in cart by use of DOM
 
